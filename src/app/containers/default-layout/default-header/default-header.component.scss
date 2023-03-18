@@ -1,4 +1,10 @@
-// img{
-//   display: n;
-//   width: 15px;
-// }
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.page-logo{
+  width: 50px;
+}
+
+.sec-container{
+  display: flex !important;
+  align-items: center !important;
+  margin-left: 0;
+}

@@ -143,12 +143,12 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=submit] {
+input[type=submit], input[type=button] {
   background-color: #56baed;
   border: none;
   color: white;
   padding: 15px 80px;
-  margin-top: 5px;
+  margin-top: 15px !important;
   text-align: start;
   text-decoration: none;
   display: inline-block;
@@ -166,7 +166,7 @@ input[type=submit] {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=button]:hover {
   background-color: #70308C;
 }
 
@@ -188,6 +188,7 @@ input[type=text] {
   display: inline-block;
   font-size: 16px;
   margin: 5px;
+  margin-top: 15px !important;
   width: 85%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
