@@ -11,6 +11,7 @@ import { ClassToggleService, HeaderComponent } from '@coreui/angular';
 export class DefaultHeaderComponent extends HeaderComponent {
 
   @Input() sidebarId: string = "sidebar";
+  public show: boolean= true;
 
   public newMessages = new Array(4)
   public newTasks = new Array(5)
@@ -18,5 +19,13 @@ export class DefaultHeaderComponent extends HeaderComponent {
 
   constructor(private classToggler: ClassToggleService) {
     super();
+
+  }
+  hide(){
+    if(this.show == true){
+      this.show = !this.show;
+    } else {
+      this.show = !this.show;
+    }
   }
 }

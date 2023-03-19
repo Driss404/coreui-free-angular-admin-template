@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+* {
+  font-family: 'Poppins';
+}
 .page-logo{
   width: 50px;
+  padding-right: 10px !important;
 }
 
 .sec-container{
   display: flex !important;
   align-items: center !important;
   margin-left: 0;
+}
+
+c-header{
+  border: none;
 }
