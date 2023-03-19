@@ -1,6 +1,6 @@
 <c-header class="w-100" position="sticky">
   <!-- <ng-container> -->
-    <c-container [fluid]="true" *ngIf="show">
+    <c-container [fluid]="true" >
 
       <c-header-nav class="d-none d-lg-flex me-auto">
         <c-nav-item class="p-0 m-0">
@@ -50,7 +50,7 @@
       </c-header-nav>
     </c-container>
 
-    <c-header-divider *ngIf="show"></c-header-divider>
+    <c-header-divider></c-header-divider>
 
     <c-container [fluid]="true">
       <button
@@ -64,7 +64,7 @@
             size="lg"
           ></svg>
       </button>
-      <button
+      <!-- <button
           toggle="visible"
           cHeaderToggler
           (click)="hide()"
@@ -74,7 +74,7 @@
             name="cilMenu"
             size="lg"
           ></svg>
-      </button>
+      </button> -->
       <c-container class="sec-container">
         <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
       </c-container>
