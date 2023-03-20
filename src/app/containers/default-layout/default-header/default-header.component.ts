@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { ClassToggleService, HeaderComponent } from '@coreui/angular';
@@ -10,8 +10,11 @@ import { ClassToggleService, HeaderComponent } from '@coreui/angular';
 })
 export class DefaultHeaderComponent extends HeaderComponent {
 
-  @Input() sidebarId: string = "sidebar";
+  // @Input() sidebarId: string = "sidebar";
   // public show: boolean= true;
+
+  //
+  isScrolled:boolean = false;
 
   public newMessages = new Array(4)
   public newTasks = new Array(5)
@@ -28,4 +31,11 @@ export class DefaultHeaderComponent extends HeaderComponent {
   //     this.show = !this.show;
   //   }
   // }
+
+  //
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 0;
+  }
+
 }

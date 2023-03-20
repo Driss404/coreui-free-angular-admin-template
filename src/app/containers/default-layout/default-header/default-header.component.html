@@ -1,34 +1,35 @@
-<c-header class="w-100" position="sticky">
-  <!-- <ng-container> -->
-    <c-container [fluid]="true" >
 
-      <c-header-nav class="d-none d-lg-flex me-auto">
-        <c-nav-item class="p-0 m-0">
+<c-header class="w-100 py-0" position="sticky" [ngClass]="{'shrunk-header': isScrolled}">
+    <c-container [fluid]="true" class=""  >
+      <c-header-brand>
+        <!-- <c-nav-item class="p-0 m-0"> -->
           <a cNavLink routerLink="/dashboard" routerLinkActive="active" class="p-0 m-0" >
             <img src="../../../../assets/img/avatars/Logo.png" class="page-logo " />
           </a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink routerLink="/dashboard" routerLinkActive="active">
-            Dashboard
-          </a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink routerLink="/users" routerLinkActive="active">
-            Users
-          </a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink routerLink="/settings" routerLinkActive="active">
-            Settings
-          </a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink routerLink="/login">Login</a>
-        </c-nav-item>
+        <!-- </c-nav-item> -->
+      </c-header-brand>
+      <c-header-nav class=" " >
+          <c-nav-item>
+            <a cNavLink routerLink="/dashboard" routerLinkActive="active">
+              Dashboard
+            </a>
+          </c-nav-item>
+          <c-nav-item>
+            <a cNavLink routerLink="/users" routerLinkActive="active">
+              Users
+            </a>
+          </c-nav-item>
+          <c-nav-item>
+            <a cNavLink routerLink="/settings" routerLinkActive="active">
+              Settings
+            </a>
+          </c-nav-item>
+          <c-nav-item>
+            <a cNavLink routerLink="/login">Login</a>
+          </c-nav-item>
       </c-header-nav>
 
-      <c-header-nav class="d-none d-lg-flex">
+      <!-- <c-header-nav class="d-none d-lg-flex">
         <c-nav-item>
           <a routerLink="./" cNavLink>
             <svg cIcon name="cilBell" size="lg"></svg>
@@ -47,11 +48,10 @@
       </c-header-nav>
       <c-header-nav class="ms-3">
         <ng-container *ngTemplateOutlet="userDropdown"></ng-container>
-      </c-header-nav>
+      </c-header-nav> -->
     </c-container>
-
-    <c-header-divider></c-header-divider>
-
+        <!-- <c-header-divider ></c-header-divider> -->
+<!--
     <c-container [fluid]="true">
       <button
           toggle="visible"
@@ -64,24 +64,15 @@
             size="lg"
           ></svg>
       </button>
-      <!-- <button
-          toggle="visible"
-          cHeaderToggler
-          (click)="hide()"
-          class=" toggle-btn ps-1"
-        >
-          <svg cIcon
-            name="cilMenu"
-            size="lg"
-          ></svg>
-      </button> -->
+
       <c-container class="sec-container">
         <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
       </c-container>
     </c-container>
+-->
 
-  <!-- </ng-container> -->
 </c-header>
+
 
 <ng-template #userDropdown>
   <c-dropdown alignment="end" variant="nav-item">

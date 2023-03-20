@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input /* imported input*/, HostListener } from '@angular/core';
 
 import { navItems } from './_nav';
 
@@ -8,6 +8,11 @@ import { navItems } from './_nav';
 })
 export class DefaultLayoutComponent {
 
+  @Input() sidebarId: string = "sidebar";/* added input property */
+
+  //
+  isScrolled:boolean = false;
+
   public navItems = navItems;
 
   public perfectScrollbarConfig = {
@@ -15,4 +20,10 @@ export class DefaultLayoutComponent {
   };
 
   constructor() {}
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 0;
+  }
+
 }
